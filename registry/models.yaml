@@ -1,0 +1,209 @@
+# SimplTknOpt Model Registry
+# Served at https://registry.simpltknopt.dev/models.yaml
+# Also used as the local seed/fallback cache.
+#
+# Capability scores are 0.0–1.0 per task type.
+# Pricing is USD per million tokens (as of May 2026 — update regularly).
+
+version: "2026-05"
+
+models:
+  - id: claude-haiku-4-5-20251001
+    display_name: "Claude Haiku 4.5"
+    provider: anthropic
+    pricing:
+      input_per_mtok: 0.80
+      output_per_mtok: 4.00
+    context_window: 200000
+    capabilities:
+      code_generation: 0.72
+      code_review: 0.70
+      reasoning: 0.65
+      summarization: 0.88
+      data_extraction: 0.85
+      creative_writing: 0.75
+      classification: 0.92
+      translation: 0.87
+      qa: 0.82
+      instruction_following: 0.75
+      tool_use: 0.78
+
+  - id: claude-sonnet-4-6
+    display_name: "Claude Sonnet 4.6"
+    provider: anthropic
+    pricing:
+      input_per_mtok: 3.00
+      output_per_mtok: 15.00
+    context_window: 200000
+    capabilities:
+      code_generation: 0.90
+      code_review: 0.90
+      reasoning: 0.87
+      summarization: 0.92
+      data_extraction: 0.93
+      creative_writing: 0.89
+      classification: 0.95
+      translation: 0.91
+      qa: 0.92
+      instruction_following: 0.93
+      tool_use: 0.92
+
+  - id: claude-opus-4-6
+    display_name: "Claude Opus 4.6"
+    provider: anthropic
+    pricing:
+      input_per_mtok: 15.00
+      output_per_mtok: 75.00
+    context_window: 200000
+    capabilities:
+      code_generation: 0.97
+      code_review: 0.97
+      reasoning: 0.97
+      summarization: 0.96
+      data_extraction: 0.96
+      creative_writing: 0.97
+      classification: 0.97
+      translation: 0.95
+      qa: 0.96
+      instruction_following: 0.98
+      tool_use: 0.96
+
+  - id: gpt-4o-mini
+    display_name: "GPT-4o mini"
+    provider: openai
+    pricing:
+      input_per_mtok: 0.15
+      output_per_mtok: 0.60
+    context_window: 128000
+    capabilities:
+      code_generation: 0.78
+      code_review: 0.75
+      reasoning: 0.70
+      summarization: 0.85
+      data_extraction: 0.82
+      creative_writing: 0.76
+      classification: 0.88
+      translation: 0.87
+      qa: 0.83
+      instruction_following: 0.78
+      tool_use: 0.82
+
+  - id: gpt-4o
+    display_name: "GPT-4o"
+    provider: openai
+    pricing:
+      input_per_mtok: 2.50
+      output_per_mtok: 10.00
+    context_window: 128000
+    capabilities:
+      code_generation: 0.93
+      code_review: 0.92
+      reasoning: 0.90
+      summarization: 0.93
+      data_extraction: 0.94
+      creative_writing: 0.91
+      classification: 0.95
+      translation: 0.93
+      qa: 0.93
+      instruction_following: 0.93
+      tool_use: 0.94
+
+  - id: o3-mini
+    display_name: "o3-mini"
+    provider: openai
+    pricing:
+      input_per_mtok: 1.10
+      output_per_mtok: 4.40
+    context_window: 128000
+    capabilities:
+      code_generation: 0.88
+      code_review: 0.86
+      reasoning: 0.97
+      summarization: 0.78
+      data_extraction: 0.80
+      creative_writing: 0.68
+      classification: 0.82
+      translation: 0.80
+      qa: 0.85
+      instruction_following: 0.83
+      tool_use: 0.80
+
+  - id: gemini/gemini-2.0-flash
+    display_name: "Gemini 2.0 Flash"
+    provider: google
+    pricing:
+      input_per_mtok: 0.10
+      output_per_mtok: 0.40
+    context_window: 1000000
+    capabilities:
+      code_generation: 0.80
+      code_review: 0.78
+      reasoning: 0.76
+      summarization: 0.88
+      data_extraction: 0.87
+      creative_writing: 0.78
+      classification: 0.90
+      translation: 0.88
+      qa: 0.86
+      instruction_following: 0.80
+      tool_use: 0.80
+
+  - id: gemini/gemini-1.5-pro
+    display_name: "Gemini 1.5 Pro"
+    provider: google
+    pricing:
+      input_per_mtok: 1.25
+      output_per_mtok: 5.00
+    context_window: 2000000
+    capabilities:
+      code_generation: 0.89
+      code_review: 0.88
+      reasoning: 0.88
+      summarization: 0.92
+      data_extraction: 0.92
+      creative_writing: 0.87
+      classification: 0.93
+      translation: 0.92
+      qa: 0.92
+      instruction_following: 0.90
+      tool_use: 0.88
+
+  - id: deepseek/deepseek-chat
+    display_name: "DeepSeek-V3"
+    provider: deepseek
+    pricing:
+      input_per_mtok: 0.27
+      output_per_mtok: 1.10
+    context_window: 64000
+    capabilities:
+      code_generation: 0.90
+      code_review: 0.88
+      reasoning: 0.85
+      summarization: 0.84
+      data_extraction: 0.83
+      creative_writing: 0.77
+      classification: 0.85
+      translation: 0.82
+      qa: 0.84
+      instruction_following: 0.85
+      tool_use: 0.80
+
+  - id: deepseek/deepseek-reasoner
+    display_name: "DeepSeek-R1"
+    provider: deepseek
+    pricing:
+      input_per_mtok: 0.55
+      output_per_mtok: 2.19
+    context_window: 64000
+    capabilities:
+      code_generation: 0.90
+      code_review: 0.88
+      reasoning: 0.97
+      summarization: 0.83
+      data_extraction: 0.82
+      creative_writing: 0.72
+      classification: 0.83
+      translation: 0.80
+      qa: 0.86
+      instruction_following: 0.85
+      tool_use: 0.79
