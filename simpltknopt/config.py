@@ -26,7 +26,7 @@ DEFAULTS: dict[str, Any] = {
     "interactive": True,
     "on_quality_failure": "continue",
     "registry_url": "https://registry.simpltknopt.dev/models.yaml",
-    "enabled_providers": ["anthropic", "openai", "google", "deepseek"],
+    "enabled_providers": ["anthropic", "openai", "google", "deepseek", "nvidia"],
 }
 
 PREFS_PATH = Path.home() / ".stko" / "preferences.yaml"
@@ -180,6 +180,7 @@ class Config:
             "openai": "OPENAI_API_KEY",
             "google": "GOOGLE_API_KEY",
             "deepseek": "DEEPSEEK_API_KEY",
+            "nvidia": "NVIDIA_API_KEY",
         }
         env_var = env_map.get(provider)
         return os.environ.get(env_var, "") if env_var else None

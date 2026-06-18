@@ -5,7 +5,7 @@
 # Capability scores are 0.0–1.0 per task type.
 # Pricing is USD per million tokens (as of May 2026 — update regularly).
 
-version: "2026-05"
+version: "2026-06"
 
 models:
   - id: claude-haiku-4-5-20251001
@@ -207,3 +207,23 @@ models:
       qa: 0.86
       instruction_following: 0.85
       tool_use: 0.79
+
+  - id: nvidia_nim/nvidia/nemotron-3-ultra-550b-a55b
+    display_name: "Nemotron 3 Ultra"
+    provider: nvidia
+    pricing:
+      input_per_mtok: 0.50
+      output_per_mtok: 2.20
+    context_window: 1000000
+    capabilities:
+      code_generation: 0.91
+      code_review: 0.90
+      reasoning: 0.96
+      summarization: 0.90
+      data_extraction: 0.91
+      creative_writing: 0.82
+      classification: 0.89
+      translation: 0.85
+      qa: 0.91
+      instruction_following: 0.92
+      tool_use: 0.88
